@@ -19,19 +19,19 @@ mod test {
 
     #[test]
     pub fn test_fibonacci_recursive() {
-        assert_eq!(level1::fibonacci_recursive(5),5);
-        assert_eq!(level1::fibonacci_recursive(6),8);
-        assert_eq!(level1::fibonacci_recursive(7),13);
+        assert_eq!(level1::fib::fibonacci_recursive(5),5);
+        assert_eq!(level1::fib::fibonacci_recursive(6),8);
+        assert_eq!(level1::fib::fibonacci_recursive(7),13);
     }
 
-    #[test]
+    #[test]     
     pub fn test_fibonacci_memo() {
         let mut dp = vec![-1;10];
-        assert_eq!(level1::fibonacci_memo(5,&mut dp),5);
+        assert_eq!(level1::fib::fibonacci_memo(5,&mut dp),5);
         dp = vec![-1;10];
-        assert_eq!(level1::fibonacci_memo(6,&mut dp),8);
+        assert_eq!(level1::fib::fibonacci_memo(6,&mut dp),8);
         dp = vec![-1;10];
-        assert_eq!(level1::fibonacci_memo(7,&mut dp),13);
+        assert_eq!(level1::fib::fibonacci_memo(7,&mut dp),13);
     }
 
 }
